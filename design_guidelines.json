@@ -1,0 +1,181 @@
+{
+  "identity": {
+    "name": "MahaSeva",
+    "mission": "Empower every citizen of Maharashtra with accessible government schemes.",
+    "persona": "The Digital Sevak - Helpful, Trustworthy, Efficient, and Warm.",
+    "tone": "Empathetic, Clear, Official but Approachable.",
+    "theme": "light",
+    "theme_rationale": "Light theme is mandatory for trust and readability for a diverse demographic including farmers and senior citizens."
+  },
+  "typography": {
+    "primary_font": "Outfit",
+    "secondary_font": "Inter",
+    "marathi_font": "Tiro Devanagari Marathi",
+    "scale": {
+      "h1": "text-4xl md:text-5xl font-bold tracking-tight",
+      "h2": "text-3xl md:text-4xl font-semibold tracking-tight",
+      "h3": "text-2xl md:text-3xl font-semibold",
+      "body_lg": "text-lg md:text-xl leading-relaxed",
+      "body": "text-base md:text-lg leading-relaxed",
+      "caption": "text-sm font-medium tracking-wide uppercase"
+    },
+    "pairing_rule": "Use Outfit for English Headings. Use Inter for English Body. Use Tiro Devanagari Marathi for ALL Marathi text. Ensure 1.5x line height for Marathi readability."
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "default": "#FF9933",
+        "foreground": "#FFFFFF",
+        "hover": "#E68A2E",
+        "description": "Deep Saffron - Represents energy and Maharashtra's culture."
+      },
+      "secondary": {
+        "default": "#0D47A1",
+        "foreground": "#FFFFFF",
+        "hover": "#0A3B8C",
+        "description": "Navy Blue - Represents trust, authority, and official service."
+      },
+      "accent": {
+        "default": "#2E7D32",
+        "foreground": "#FFFFFF",
+        "description": "Emerald Green - Represents agriculture, growth, and prosperity."
+      },
+      "background": {
+        "default": "#F8F9FA",
+        "paper": "#FFFFFF",
+        "subtle": "#F1F5F9"
+      },
+      "text": {
+        "primary": "#1A1A1A",
+        "secondary": "#4A5568",
+        "muted": "#718096"
+      },
+      "status": {
+        "success": "#10B981",
+        "warning": "#F59E0B",
+        "error": "#EF4444",
+        "info": "#3B82F6"
+      }
+    },
+    "gradients": {
+      "primary_mesh": "bg-gradient-to-br from-orange-100 via-white to-blue-50",
+      "card_hover": "bg-gradient-to-r from-orange-50 to-transparent",
+      "hero_glow": "bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-100 via-background to-background"
+    }
+  },
+  "layout_strategies": {
+    "container": "container mx-auto px-4 md:px-6 max-w-7xl",
+    "spacing": {
+      "section_gap": "gap-8 md:gap-12 lg:gap-16",
+      "card_padding": "p-6 md:p-8"
+    },
+    "grids": {
+      "bento_categories": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6",
+      "scheme_list": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+    },
+    "rules": [
+      "Mobile-First: Always design for 360px width first.",
+      "Touch Targets: All interactive elements must be min 48px height.",
+      "Optical Balance: Center align headings only in Hero. Left align everywhere else for readability."
+    ]
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#FF9933] text-white hover:bg-[#E68A2E] shadow-lg hover:shadow-xl transition-all duration-300 rounded-full px-8 py-3 font-semibold",
+      "secondary": "bg-[#0D47A1] text-white hover:bg-[#0A3B8C] shadow-md hover:shadow-lg transition-all duration-300 rounded-full px-8 py-3 font-medium",
+      "outline": "border-2 border-[#0D47A1] text-[#0D47A1] hover:bg-[#0D47A1] hover:text-white transition-all duration-300 rounded-full px-8 py-3 font-medium"
+    },
+    "cards": {
+      "category": "group relative overflow-hidden rounded-2xl border border-orange-100 bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1",
+      "scheme": "bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200 p-6 flex flex-col h-full",
+      "glass": "bg-white/80 backdrop-blur-md border border-white/20 shadow-lg"
+    },
+    "badges": {
+      "style": "inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+      "category_farmer": "bg-green-100 text-green-800",
+      "category_student": "bg-blue-100 text-blue-800",
+      "category_women": "bg-pink-100 text-pink-800",
+      "category_startup": "bg-purple-100 text-purple-800",
+      "default": "bg-slate-100 text-slate-800"
+    }
+  },
+  "motion": {
+    "principles": "Gentle, guiding, and distinct. No frantic movements.",
+    "transitions": {
+      "default": "transition-all duration-300 ease-in-out",
+      "hover_lift": "hover:-translate-y-1 hover:shadow-lg",
+      "button_press": "active:scale-95"
+    },
+    "animations": {
+      "fade_in": "animate-in fade-in duration-500",
+      "slide_up": "animate-in slide-in-from-bottom-4 fade-in duration-700",
+      "stagger_list": "stagger-children-100"
+    }
+  },
+  "images": {
+    "categories": [
+      {
+        "category": "Farmer",
+        "url": "https://images.pexels.com/photos/29283558/pexels-photo-29283558.jpeg",
+        "alt": "Indian farmer in field"
+      },
+      {
+        "category": "Student",
+        "url": "https://images.pexels.com/photos/9159059/pexels-photo-9159059.jpeg",
+        "alt": "Students studying together"
+      },
+      {
+        "category": "Women",
+        "url": "https://images.unsplash.com/photo-1637176594832-97454dc84edf",
+        "alt": "Group of women self help group"
+      },
+      {
+        "category": "Startup",
+        "url": "https://images.unsplash.com/photo-1765366417033-5d74f04ca77a",
+        "alt": "Modern office startup"
+      },
+      {
+        "category": "Senior Citizens",
+        "url": "https://images.unsplash.com/photo-1764426381345-f33736598e42",
+        "alt": "Elderly indian woman"
+      },
+      {
+        "category": "Disabled",
+        "url": "https://images.unsplash.com/photo-1699547283492-7a8b85165edd",
+        "alt": "Support for disabled persons"
+      }
+    ],
+    "hero_background": "https://images.unsplash.com/photo-1623211269755-569fec0536d2",
+    "placeholder": "https://images.unsplash.com/photo-1765366417033-5d74f04ca77a"
+  },
+  "instructions_to_main_agent": [
+    "1. THEME: FORCE LIGHT THEME. Do not implement dark mode toggle for MVP. The target audience (rural/elderly) prefers high contrast light mode.",
+    "2. LANGUAGE: Implement a persistent Language Toggle (English/Marathi) in the Header. Use a context provider for translation.",
+    "3. NAVIGATION: Use a bottom navigation bar for mobile (Home, Search, Bookmarks, Profile) and a top nav for desktop.",
+    "4. COMPONENTS: Use shadcn components from `/app/frontend/src/components/ui/`. Customize them with the colors defined above.",
+    "5. DATA: For 'Pre-populated government scheme data', create a `schemes.json` or `schemes.js` file with at least 5 dummy schemes per category. DO NOT fetch from an external empty API.",
+    "6. ACCESSIBILITY: Ensure all text has sufficient contrast. Use 'aria-label' for all icon buttons.",
+    "7. ELIGIBILITY CHECKER: Make it a step-by-step 'Wizard' form, not a long scrollable page.",
+    "8. SEARCH: Implement a real-time search filter for the scheme list.",
+    "9. TOASTS: Use 'sonner' for all notifications (e.g., 'Scheme Saved', 'Logged in').",
+    "10. ICONS: Use `lucide-react` (default) or `react-icons/fa` for category icons.",
+    "11. ROUTING: Use `react-router-dom`."
+  ],
+  "universal_guidelines": [
+    "You tend to converge toward generic, 'on distribution' outputs. Avoid this.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur) for sticky headers.",
+    "Every interaction needs micro-animations - hover states, transitions.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Components MUST use named exports.",
+    "All interactive elements MUST include data-testid attribute."
+  ],
+  "accessibility_checklist": [
+    "Color Contrast: Minimum 4.5:1 for normal text.",
+    "Touch Targets: Minimum 48x48px.",
+    "Alt Text: All images must have descriptive alt text.",
+    "Focus Indicators: Visible focus ring for keyboard navigation.",
+    "Semantic HTML: Use <main>, <nav>, <header>, <footer>, <article>."
+  ]
+}

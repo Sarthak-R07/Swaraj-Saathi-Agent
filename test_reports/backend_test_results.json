@@ -1,0 +1,200 @@
+{
+  "timestamp": "2026-02-12T13:10:16.374989",
+  "summary": {
+    "total_tests": 27,
+    "passed_tests": 27,
+    "failed_tests": 0,
+    "success_rate": "100.0%"
+  },
+  "detailed_results": [
+    {
+      "test": "Health Check",
+      "status": "pass",
+      "details": "Status: 200",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Health Check Response",
+      "status": "pass",
+      "details": "Health status OK",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Send OTP",
+      "status": "pass",
+      "details": "Status: 200",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "OTP Generation",
+      "status": "pass",
+      "details": "OTP received: 725458",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Verify OTP",
+      "status": "pass",
+      "details": "Status: 200",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Token Generation",
+      "status": "pass",
+      "details": "Auth token received",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Get User Profile",
+      "status": "pass",
+      "details": "Status: 200",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "User Profile Data",
+      "status": "pass",
+      "details": "User phone: 9876543210",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Update User Profile",
+      "status": "pass",
+      "details": "Status: 200",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Profile Update",
+      "status": "pass",
+      "details": "Name updated to: Test User",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Get Categories",
+      "status": "pass",
+      "details": "Status: 200",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Categories Response",
+      "status": "pass",
+      "details": "Found 10 categories with scheme counts",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Get All Schemes",
+      "status": "pass",
+      "details": "Status: 200",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Schemes Structure",
+      "status": "pass",
+      "details": "Found 17 schemes with valid structure",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Get Farmer Schemes",
+      "status": "pass",
+      "details": "Status: 200",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Category Filter",
+      "status": "pass",
+      "details": "Found 3 farmer schemes",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Search Schemes",
+      "status": "pass",
+      "details": "Status: 200",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Search Functionality",
+      "status": "pass",
+      "details": "Found 3 schemes matching 'farmer'",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Get Scheme Details",
+      "status": "pass",
+      "details": "Status: 200",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Scheme Detail Structure",
+      "status": "pass",
+      "details": "All required fields present",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Add Bookmark",
+      "status": "pass",
+      "details": "Status: 200",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Get Bookmarks",
+      "status": "pass",
+      "details": "Status: 200",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Bookmark Retrieval",
+      "status": "pass",
+      "details": "Found 1 bookmarked schemes",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Remove Bookmark",
+      "status": "pass",
+      "details": "Status: 200",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Eligibility Check",
+      "status": "pass",
+      "details": "Status: 200",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Eligibility Matching",
+      "status": "pass",
+      "details": "Found 17 matching schemes",
+      "expected": "",
+      "actual": ""
+    },
+    {
+      "test": "Invalid Endpoint",
+      "status": "pass",
+      "details": "Status: 404",
+      "expected": "",
+      "actual": ""
+    }
+  ]
+}

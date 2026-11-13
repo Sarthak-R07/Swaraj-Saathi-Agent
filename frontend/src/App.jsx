@@ -4,19 +4,27 @@ import CitizenDashboard from './components/CitizenDashboard';
 import './index.css';
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [role, setRole] = useState(null); // 'agent' or 'citizen'
-  const [mobile, setMobile] = useState('');
-  const [otp, setOtp] = useState('');
+  // Default to authenticated agent for instant zero-friction portal access
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    const saved = localStorage.getItem('auth_token');
+    return saved !== 'logged_out';
+  });
+  const [role, setRole] = useState(() => {
+    return localStorage.getItem('user_role') || 'agent';
+  });
+  const [mobile, setMobile] = useState('9876543210');
+  const [otp, setOtp] = useState('1234');
   const [error, setError] = useState('');
 
   useEffect(() => {
-    // Check local storage for auth token
-    const token = localStorage.getItem('auth_token');
-    const savedRole = localStorage.getItem('user_role');
-    if (token && savedRole) {
+    // Check URL parameters for explicit role or reset
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('role') === 'citizen') {
+      setRole('citizen');
       setIsAuthenticated(true);
-      setRole(savedRole);
+    } else if (params.get('role') === 'agent' || !localStorage.getItem('user_role')) {
+      setRole('agent');
+      setIsAuthenticated(true);
     }
   }, []);
 
@@ -107,6 +115,33 @@ function App() {
               >
                 Login Securely
               </button>
+
+              <div className="grid grid-cols-2 gap-3 pt-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    localStorage.setItem('auth_token', 'agent-demo-token');
+                    localStorage.setItem('user_role', 'agent');
+                    setIsAuthenticated(true);
+                    setRole('agent');
+                  }}
+                  className="py-2.5 px-3 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white rounded-[10px] font-bold text-xs shadow transition-all flex items-center justify-center gap-1.5"
+                >
+                  ⚡ Agent Dashboard
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    localStorage.setItem('auth_token', 'citizen-demo-token');
+                    localStorage.setItem('user_role', 'citizen');
+                    setIsAuthenticated(true);
+                    setRole('citizen');
+                  }}
+                  className="py-2.5 px-3 bg-slate-800 hover:bg-slate-900 text-white rounded-[10px] font-bold text-xs shadow transition-all flex items-center justify-center gap-1.5"
+                >
+                  👤 Citizen Portal
+                </button>
+              </div>
             </form>
 
             <div className="mt-8 p-4 bg-[#FF7A00]/5 rounded-[12px] border border-[#FF7A00]/20 text-sm text-gray-700">

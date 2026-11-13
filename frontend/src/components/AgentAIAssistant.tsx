@@ -2,10 +2,18 @@ import React, { useState, useEffect, useRef } from 'react';
 import OpenAI from 'openai';
 import { apiUrl } from '../api';
 
-// Key from VITE_OPENAI_KEY env var (set in Vercel dashboard for prod; .env.local for dev)
+// Key from VITE_OPENAI_KEY env var (optional)
 const OPENAI_API_KEY = import.meta.env.VITE_OPENAI_KEY || '';
 
-const openai = new OpenAI({ apiKey: OPENAI_API_KEY, dangerouslyAllowBrowser: true });
+// Safely initialize OpenAI only if an explicit API key is provided
+let openai: OpenAI | null = null;
+if (OPENAI_API_KEY && OPENAI_API_KEY.trim().length > 0) {
+  try {
+    openai = new OpenAI({ apiKey: OPENAI_API_KEY, dangerouslyAllowBrowser: true });
+  } catch (e) {
+    console.warn('OpenAI client initialization skipped:', e);
+  }
+}
 
 const SYSTEM_PROMPT = `You are "Swaraj AI Agent Assistant", an expert co-pilot for E-Seva Kendra workers in India (Maharashtra focus).
 
